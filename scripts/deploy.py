@@ -27,6 +27,3 @@ def deploy_simple_storage():
 def main():
     ss = deploy_simple_storage()
     c = deploy_coins()
-    c.mint(accounts[0], 100,{"from": accounts[0]})
-    print(c.checkAmount({"from": accounts[0]}))
-    print(c.display())

@@ -3,7 +3,7 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Coin {
-    address public creator;
+    address public immutable creator;
 
     mapping(address => uint256) public balances;
 
