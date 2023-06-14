@@ -3,7 +3,7 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Coin {
-    address public immutable creator;
+    address public creator;
 
     mapping(address => uint256) public balances;
 
@@ -26,6 +26,7 @@ contract Coin {
 
     function send(address _receiver, uint256 _amount) public{
         require(balances[msg.sender]>=_amount, "You don`t have enought coins!!!");
+        
         balances[msg.sender]-=_amount;
         balances[_receiver]+=_amount;
         emit SendCoins(msg.sender, _receiver, _amount);
