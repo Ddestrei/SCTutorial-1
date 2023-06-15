@@ -1,0 +1,14 @@
+
+dotenv: .env
+keys:
+  private_key: ${PRIVATE_KEY}
+
+networks:
+  defoult: development
+
+  development:
+    verify: False
+
+  goerli:
+    verify: True
+
